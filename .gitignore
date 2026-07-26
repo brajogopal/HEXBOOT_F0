@@ -1,3 +1,21 @@
+# Eclipse workspace
+.metadata/
+
+# Build output
+Core/Debug/
+Core/Release/
+
+# Object files
+*.o
+*.d
+
+# Generated binaries
+*.elf
+*.hex
+*.bin
+*.map
+*.list
+
 # Prerequisites
 *.d
 
