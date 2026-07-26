@@ -359,7 +359,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="of_2Rt-q9zQW8iAH-rZa" name="05 - Metadata Update Flow">
-    <mxGraphModel dx="1126" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1585" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -369,7 +369,7 @@
         <mxCell id="TyRrEvXGWaUDsMJMd7qS-5" edge="1" parent="1" source="-NutZWXwp3KyBz4x9QKr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="TyRrEvXGWaUDsMJMd7qS-3" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-NutZWXwp3KyBz4x9QKr-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Firmware verified&lt;br&gt;&lt;/font&gt;" vertex="1">
+        <mxCell id="-NutZWXwp3KyBz4x9QKr-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Validation Passed&lt;/font&gt;" vertex="1">
           <mxGeometry height="60" width="155" x="348" y="160" as="geometry" />
         </mxCell>
         <mxCell id="ef8jUfxygVHVaK0CBZkJ-5" edge="1" parent="1" source="TyRrEvXGWaUDsMJMd7qS-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ef8jUfxygVHVaK0CBZkJ-1" value="">
@@ -506,7 +506,7 @@
         <mxCell id="ElXQZb19_ogTTDfHk9Zc-1" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#FFFFFF;strokeColor=#FFB366;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Rollback Available?&lt;/font&gt;" vertex="1">
           <mxGeometry height="80" width="125.5" x="362.75" y="570" as="geometry" />
         </mxCell>
-        <mxCell id="KWqEDgcJeAsdssyl0NJS-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Stay in Bootloader&lt;/font&gt;" vertex="1">
+        <mxCell id="KWqEDgcJeAsdssyl0NJS-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Bootloader Mode&lt;/font&gt;" vertex="1">
           <mxGeometry height="40" width="140" x="560" y="590" as="geometry" />
         </mxCell>
       </root>
