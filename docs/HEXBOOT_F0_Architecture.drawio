@@ -199,29 +199,8 @@
         <mxCell id="xOUu2K6jx4zl3n8vLmAP-3" edge="1" parent="1" source="h-qpTZc8MgyADrSAfExr-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="xOUu2K6jx4zl3n8vLmAP-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="h-qpTZc8MgyADrSAfExr-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" value="Firmware Update Started" vertex="1">
-          <mxGeometry height="60" width="120" x="420" y="150" as="geometry" />
-        </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;State Machine switch to FW_COMPLETE&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="205" x="378" y="390" as="geometry" />
-        </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-7" edge="1" parent="1" source="tXZwgb27o6TBdXs5GdUM-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="480.5" y="570" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;CRC calculated&lt;/font&gt;" vertex="1">
-          <mxGeometry height="40" width="139.5" x="410.75" y="490" as="geometry" />
-        </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-12" edge="1" parent="1" source="iYLJPvrwDifUnHiVZPiF-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="tXZwgb27o6TBdXs5GdUM-8">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="540.5" y="590" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-13" connectable="0" parent="tXZwgb27o6TBdXs5GdUM-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Verified&lt;/font&gt;" vertex="1">
-          <mxGeometry relative="1" x="-0.0782" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
+        <mxCell id="h-qpTZc8MgyADrSAfExr-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Firmware Transfer Started&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="160" x="345" y="150" as="geometry" />
         </mxCell>
         <mxCell id="tXZwgb27o6TBdXs5GdUM-4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
           <mxGeometry relative="1" as="geometry">
@@ -229,89 +208,19 @@
             <mxPoint x="480.5" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-6" edge="1" parent="1" source="tXZwgb27o6TBdXs5GdUM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="tXZwgb27o6TBdXs5GdUM-2">
+        <mxCell id="icCdTtEM3GVfAWpRnOy1-1" edge="1" parent="1" source="xOUu2K6jx4zl3n8vLmAP-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="icCdTtEM3GVfAWpRnOy1-2" value="">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="481" y="480" as="targetPoint" />
+            <mxPoint x="480.5" y="400" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-11" edge="1" parent="1" source="tXZwgb27o6TBdXs5GdUM-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="tXZwgb27o6TBdXs5GdUM-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <UserObject label="&lt;font style=&quot;font-size: 15px;&quot;&gt;Go to: 05 Metadata&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;Update Flow&lt;/span&gt;" link="data:page/id,of_2Rt-q9zQW8iAH-rZa" id="tXZwgb27o6TBdXs5GdUM-8">
-          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#999999;" vertex="1">
-            <mxGeometry height="60" width="120" x="645" y="670" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <mxCell id="tXZwgb27o6TBdXs5GdUM-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" value="Select Bootslot" vertex="1">
-          <mxGeometry height="40" width="120" x="420" y="760" as="geometry" />
-        </mxCell>
-        <mxCell id="lyXNgnHTWzwjsRCPJDyO-2" edge="1" parent="1" source="iYLJPvrwDifUnHiVZPiF-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="s7WbwC8r0J0qCPMxCvHN-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="408" y="780" as="sourcePoint" />
-            <mxPoint x="222.49999999999977" y="520" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="lyXNgnHTWzwjsRCPJDyO-4" connectable="0" parent="lyXNgnHTWzwjsRCPJDyO-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Failed&lt;/span&gt;" vertex="1">
-          <mxGeometry relative="1" x="-0.1318" y="2" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="iYLJPvrwDifUnHiVZPiF-1" parent="1" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#FFA500;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;CRC Verification&lt;/span&gt;" vertex="1">
-          <mxGeometry height="120" width="145" x="408" y="570" as="geometry" />
-        </mxCell>
-        <mxCell id="lyXNgnHTWzwjsRCPJDyO-3" edge="1" parent="1" source="lyXNgnHTWzwjsRCPJDyO-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="h-qpTZc8MgyADrSAfExr-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="lyXNgnHTWzwjsRCPJDyO-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Request For resend&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="165" x="147.5" y="270" as="geometry" />
-        </mxCell>
-        <mxCell id="xOUu2K6jx4zl3n8vLmAP-4" edge="1" parent="1" source="xOUu2K6jx4zl3n8vLmAP-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="tXZwgb27o6TBdXs5GdUM-1" value="">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xOUu2K6jx4zl3n8vLmAP-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Program Flash&lt;br/&gt;(Chunk by Chunk)&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="165" x="398" y="270" as="geometry" />
+          <mxGeometry height="60" width="165" x="343" y="270" as="geometry" />
         </mxCell>
-        <mxCell id="s7WbwC8r0J0qCPMxCvHN-3" edge="1" parent="1" source="s7WbwC8r0J0qCPMxCvHN-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="s7WbwC8r0J0qCPMxCvHN-2" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="s7WbwC8r0J0qCPMxCvHN-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=center;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Retry Count++&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="165" x="145" y="490" as="geometry" />
-        </mxCell>
-        <mxCell id="s7WbwC8r0J0qCPMxCvHN-4" edge="1" parent="1" source="s7WbwC8r0J0qCPMxCvHN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="lyXNgnHTWzwjsRCPJDyO-1" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="227" y="360" />
-              <mxPoint x="225" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="s7WbwC8r0J0qCPMxCvHN-5" connectable="0" parent="s7WbwC8r0J0qCPMxCvHN-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Yes&lt;/font&gt;" vertex="1">
-          <mxGeometry relative="1" x="0.04" y="1" as="geometry">
-            <mxPoint y="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nKlkOudAPR1SV_kmjyUj-1" edge="1" parent="1" source="s7WbwC8r0J0qCPMxCvHN-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="YKixDyXGz-XmOxmDocoG-1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="125" y="420" />
-            </Array>
-            <mxPoint x="355" y="770" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nKlkOudAPR1SV_kmjyUj-2" connectable="0" parent="nKlkOudAPR1SV_kmjyUj-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;No&lt;/font&gt;" vertex="1">
-          <mxGeometry relative="1" x="-0.9233" as="geometry">
-            <mxPoint x="-15" y="20" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="s7WbwC8r0J0qCPMxCvHN-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Retry &amp;lt; MAX ?&lt;/font&gt;" vertex="1">
-          <mxGeometry height="60" width="160" x="147.5" y="390" as="geometry" />
-        </mxCell>
-        <mxCell id="YKixDyXGz-XmOxmDocoG-2" edge="1" parent="1" source="YKixDyXGz-XmOxmDocoG-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tXZwgb27o6TBdXs5GdUM-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YKixDyXGz-XmOxmDocoG-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Notify Firmware Sender&lt;/font&gt;" vertex="1">
-          <mxGeometry height="50" width="120" x="65" y="590" as="geometry" />
-        </mxCell>
+        <UserObject label="&lt;font style=&quot;font-size: 15px;&quot;&gt;Go to: 03 - Firmware Validation Flow&lt;/font&gt;" link="data:page/id,NXkNPxvvYZDRn9dTlOaw" id="icCdTtEM3GVfAWpRnOy1-2">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" vertex="1">
+            <mxGeometry height="60" width="160" x="345" y="390" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
@@ -320,7 +229,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="UtE8Dori_33LrgRGQ-Qn-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Firmware Validation Flow&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;How does the new firmware validated&lt;/font&gt;&lt;/p&gt;" vertex="1">
+        <mxCell id="UtE8Dori_33LrgRGQ-Qn-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Firmware Validation Flow&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;How is the new firmware validated?&lt;/font&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="110" width="560" x="145" as="geometry" />
         </mxCell>
         <mxCell id="K-_iFcrwjgHRuPnYQ9Rl-5" edge="1" parent="1" source="zuNz8JhLcwwLTR14rx8G-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="K-_iFcrwjgHRuPnYQ9Rl-1" value="">
@@ -353,13 +262,13 @@
         <mxCell id="K-_iFcrwjgHRuPnYQ9Rl-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#000099;" value="&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Flash Verify&lt;/font&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="120" x="365" y="460" as="geometry" />
         </mxCell>
-        <UserObject label="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Go to: 04 - Metadata Update Flow&lt;/font&gt;&lt;/span&gt;" link="data:page/id,of_2Rt-q9zQW8iAH-rZa" id="K-_iFcrwjgHRuPnYQ9Rl-10">
+        <UserObject label="&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Go to: 05 - Metadata Update Flow&lt;/font&gt;&lt;/span&gt;" link="data:page/id,of_2Rt-q9zQW8iAH-rZa" id="K-_iFcrwjgHRuPnYQ9Rl-10">
           <mxCell parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;fillColor=#008A00;" vertex="1">
             <mxGeometry height="70" width="160" x="345" y="540" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="K-_iFcrwjgHRuPnYQ9Rl-13" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px; margin-bottom: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Note :&lt;br&gt;&lt;/span&gt;&lt;blockquote data-start=&quot;2225&quot; data-end=&quot;2338&quot; style=&quot;margin: 0px;&quot;&gt;&lt;p data-start=&quot;2227&quot; data-end=&quot;2338&quot; class=&quot;PDq2pG_selectionAnchorContainer&quot; style=&quot;margin-top: 0px; margin-bottom: 0px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;If any validation step fails, the firmware update is rejected and control returns to the update flow.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p data-start=&quot;2340&quot; data-end=&quot;2434&quot;&gt;&lt;/p&gt;&lt;/h1&gt;" vertex="1">
-          <mxGeometry height="150" width="180" x="580" y="290" as="geometry" />
+        <mxCell id="K-_iFcrwjgHRuPnYQ9Rl-13" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" value="&lt;h1 style=&quot;margin-top: 0px; margin-bottom: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Note :&lt;br&gt;&lt;/span&gt;&lt;blockquote data-start=&quot;2225&quot; data-end=&quot;2338&quot; style=&quot;margin: 0px;&quot;&gt;&lt;p data-start=&quot;2227&quot; data-end=&quot;2338&quot; class=&quot;PDq2pG_selectionAnchorContainer&quot; style=&quot;margin-top: 0px; margin-bottom: 0px;&quot;&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;If any validation step fails, the firmware update is rejected and control returns to the Firmware update flow.&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p data-start=&quot;2340&quot; data-end=&quot;2434&quot;&gt;&lt;/p&gt;&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="150" width="210" x="580" y="290" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
