@@ -137,12 +137,12 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="z-VwPnf3hsZU7AWL7S5O" name="04 - Module Responsibility">
+  <diagram id="z-VwPnf3hsZU7AWL7S5O" name="04 - Module Responsibilities">
     <mxGraphModel dx="1030" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="KCem8eQclwTY_3AL6STW-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Module Responsibility&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;which module is responsible to perform which task&lt;/font&gt;&lt;/p&gt;" vertex="1">
+        <mxCell id="KCem8eQclwTY_3AL6STW-1" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Module&amp;nbsp;Responsibilities&lt;/h1&gt;&lt;p&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;which module is responsible to perform which task&lt;/font&gt;&lt;/p&gt;" vertex="1">
           <mxGeometry height="80" width="650" x="100" y="10" as="geometry" />
         </mxCell>
         <mxCell id="fqnO_xpPqM6V0PL0hV1o-25" parent="1" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedHeader=1;" value="" vertex="1">
