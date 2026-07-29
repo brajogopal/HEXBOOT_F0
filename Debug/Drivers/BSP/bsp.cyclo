@@ -1,0 +1,4 @@
+../Drivers/BSP/bsp.c:13:6:pinMode	7
+../Drivers/BSP/bsp.c:51:6:digitalWrite	8
+../Drivers/BSP/bsp.c:90:9:digitalRead	7
+../Drivers/BSP/bsp.c:126:6:togglePin	7

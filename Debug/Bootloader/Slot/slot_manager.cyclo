@@ -1,0 +1,6 @@
+../Bootloader/Slot/slot_manager.c:13:8:slot_manager_get_active_slot	1
+../Bootloader/Slot/slot_manager.c:19:8:slot_manager_get_inactive_slot	2
+../Bootloader/Slot/slot_manager.c:29:10:slot_manager_get_slot_address	2
+../Bootloader/Slot/slot_manager.c:39:14:slot_manager_get_slot_info	2
+../Bootloader/Slot/slot_manager.c:49:15:slot_manager_is_bootable	8
+../Bootloader/Slot/slot_manager.c:91:8:slot_manager_select_boot_slot	3

@@ -1,0 +1,7 @@
+../Bootloader/Metadata/metadata.c:16:13:metadata_default_values	1
+../Bootloader/Metadata/metadata.c:56:6:metadata_init	2
+../Bootloader/Metadata/metadata.c:67:6:metadata_load	1
+../Bootloader/Metadata/metadata.c:79:16:metadata_save	3
+../Bootloader/Metadata/metadata.c:109:9:metadata_verify	6
+../Bootloader/Metadata/metadata.c:147:8:metadata_get_active_slot	1
+../Bootloader/Metadata/metadata.c:153:6:metadata_set_active_slot	1

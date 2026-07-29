@@ -1,0 +1,2 @@
+../Bootloader/Receiver/firmware_pingpong.c:19:6:firmware_pingpong_init	1
+../Bootloader/Receiver/firmware_pingpong.c:28:6:swap_buffers	1

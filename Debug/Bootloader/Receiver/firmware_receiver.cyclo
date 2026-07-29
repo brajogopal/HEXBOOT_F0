@@ -1,0 +1,7 @@
+../Bootloader/Receiver/firmware_receiver.c:62:6:firmware_receiver_init	1
+../Bootloader/Receiver/firmware_receiver.c:68:6:firmware_receiver_dma_callback	1
+../Bootloader/Receiver/firmware_receiver.c:74:6:firmware_rx_process	8
+../Bootloader/Receiver/firmware_receiver.c:136:15:firmware_rx_get_state	1
+../Bootloader/Receiver/firmware_receiver.c:142:9:get_rx_update	1
+../Bootloader/Receiver/firmware_receiver.c:148:6:firmware_set_payload_info	1
+../Bootloader/Receiver/firmware_receiver.c:160:17:firmware_get_next_chunk_size	2

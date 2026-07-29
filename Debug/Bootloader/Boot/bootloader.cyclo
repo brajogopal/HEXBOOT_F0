@@ -1,0 +1,11 @@
+../Bootloader/Boot/bootloader.c:99:6:bootloader_init	1
+../Bootloader/Boot/bootloader.c:120:6:bootloader_run	8
+../Bootloader/Boot/bootloader.c:163:13:bootloader_state	11
+../Bootloader/Boot/bootloader.c:249:13:bootloader_send_requested_slot	2
+../Bootloader/Boot/bootloader.c:262:13:flash_handle_status	5
+../Bootloader/Boot/bootloader.c:285:24:firmware_get_info	3
+../Bootloader/Boot/bootloader.c:312:13:print_slot	2
+../Bootloader/Boot/bootloader.c:325:13:jmp_to_app	2
+../Bootloader/Boot/bootloader.c:356:12:is_valid_app	7
+../Bootloader/Boot/bootloader.c:388:13:relocate_vector_table	2
+../Bootloader/Boot/bootloader.c:407:13:jump	2
