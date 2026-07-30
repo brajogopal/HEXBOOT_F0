@@ -1,4 +1,0 @@
-../Drivers/SYSTICK/systick.c:18:6:systick_init	1
-../Drivers/SYSTICK/systick.c:29:6:SysTick_Handler	1
-../Drivers/SYSTICK/systick.c:34:10:systick_get_tick	1
-../Drivers/SYSTICK/systick.c:39:6:systick_reset_tick	1

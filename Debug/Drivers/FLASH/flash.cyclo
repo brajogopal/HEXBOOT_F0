@@ -1,9 +1,0 @@
-../Drivers/FLASH/flash.c:45:23:flash_unlock	3
-../Drivers/FLASH/flash.c:64:23:flash_lock	1
-../Drivers/FLASH/flash.c:72:13:flash_clear_flags	1
-../Drivers/FLASH/flash.c:78:23:flash_wait_busy	3
-../Drivers/FLASH/flash.c:94:23:flash_erase_page	6
-../Drivers/FLASH/flash.c:137:23:flash_program_halfword	8
-../Drivers/FLASH/flash.c:184:23:flash_program_buffer	4
-../Drivers/FLASH/flash.c:215:16:flash_erase	4
-../Drivers/FLASH/flash.c:250:16:flash_program	3
