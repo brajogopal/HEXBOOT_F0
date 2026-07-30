@@ -2,8 +2,8 @@
 .metadata/
 
 # Build output
-Core/Debug/
-Core/Release/
+Debug/
+Release/
 
 # Object files
 *.o

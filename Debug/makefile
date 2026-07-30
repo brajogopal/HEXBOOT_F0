@@ -22,6 +22,8 @@ RM := rm -rf
 -include Bootloader/Receiver/subdir.mk
 -include Bootloader/Metadata/subdir.mk
 -include Bootloader/Boot/subdir.mk
+-include .metadata/.plugins/org.eclipse.cdt.managedbuilder.core/subdir.mk
+-include .metadata/.plugins/org.eclipse.cdt.make.core/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
