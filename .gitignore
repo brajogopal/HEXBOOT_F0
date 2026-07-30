@@ -15,6 +15,7 @@ Core/Release/
 *.bin
 *.map
 *.list
+*.launch
 
 # Prerequisites
 *.d
