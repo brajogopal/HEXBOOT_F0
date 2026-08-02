@@ -45,19 +45,19 @@ instead of a commercial development board.
 
 ## Development Environment
 
-![Development Environment](Documentation/Images/01_development_environment.jpg)
+![Development Environment](Documentation/images/01_development_environment.jpg)
 
 ---
 
 ## Hardware Test Setup
 
-![Hardware Setup](Documentation/Images/02_hardware_test_setup.jpg)
+![Hardware Setup](Documentation/images/02_hardware_test_setup.jpg)
 
 ---
 
 ## STM32F030C8T6 Bare-Metal Test Board
 
-![STM32F030C8T6](Documentation/Images/03_STM32F030C8T6_Bare-Metal_Test_Setup.jpeg)
+![STM32F030C8T6](Documentation/images/03_STM32F030C8T6_Bare-Metal_Test_Setup.jpeg)
 
 ---
 
@@ -78,7 +78,7 @@ HEXBOOT_F0
 
 or
 
-![Repository Structure](Documentation/Images/04_repo_structure.png)
+![Repository Structure](Documentation/images/04_repo_structure.png)
 
 ---
 
@@ -87,7 +87,7 @@ or
 The bootloader occupies the first 16 KB of Flash followed by metadata and two
 independent firmware slots.
 
-![Memory Layout](Documentation/Images/05_Memory_Map.png)
+![Memory Layout](Documentation/images/05_Memory_Map.png)
 
 ---
 
@@ -97,7 +97,7 @@ At reset the bootloader initializes the hardware, waits for an update request,
 selects the appropriate firmware slot, validates the application and safely jumps
 to the selected image.
 
-![Boot Sequence](Documentation/Images/06_Boot_Sequence.png)
+![Boot Sequence](Documentation/images/06_Boot_Sequence.png)
 
 ---
 
@@ -105,7 +105,7 @@ to the selected image.
 
 Example output after successfully updating firmware and booting into Slot B.
 
-![UART Output](Documentation/Images/07_Test_results.png)
+![UART Output](Documentation/images/07_Test_results.png)
 
 ---
 
