@@ -1,0 +1,1 @@
+Note: These example applications are provided for quick verification of the bootloader. Flash or transmit the included .bin files to observe firmware updates, slot switching, and application execution.
