@@ -17,6 +17,9 @@ Release/
 *.list
 *.launch
 
+# Keep test binaries
+!Tests/**/*.bin
+
 # Prerequisites
 *.d
 
