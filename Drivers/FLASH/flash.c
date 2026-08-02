@@ -5,7 +5,7 @@
  */
 #include "stm32f030x8.h"
 #include "flash.h"
-#include "uart.h"
+
 
 
 #define FLASH_FKEY1		0x45670123
@@ -219,7 +219,6 @@ flash_status_t flash_erase(uint32_t start_address, uint32_t size_bytes)
 	if (status != FLASH_OK)
 	{
 		flash_lock();
-		println("Flash unlock failed");
 		return status;
 	}
 
@@ -255,7 +254,6 @@ flash_status_t flash_program(uint32_t flash_address,
 	if (status != FLASH_OK)
 	{
 		flash_lock();
-		println("Flash unlock failed");
 		return status;
 	}
 
@@ -264,7 +262,6 @@ flash_status_t flash_program(uint32_t flash_address,
 	if (status != FLASH_OK)
 	{
 		flash_lock();
-		println("Flash write failed");
 		return status;
 	}
 

@@ -6,7 +6,7 @@
 
 #include "systick.h"
 #include "stm32f030x8.h"
-#include "uart.h"
+#include "rcc.h"
 
 #define CTRL_ENABLE     (1U << 0)
 #define CTRL_TICKINT    (1U << 1)
@@ -17,7 +17,7 @@ static volatile uint32_t system_tick = 0;
 
 void systick_init(uint32_t tick_hz)
 {
-    uint32_t clock = get_pclk1_freq();
+    uint32_t clock = rcc_get_pclk1_freq();
 
     SysTick->LOAD = (clock / tick_hz) - 1U;
 

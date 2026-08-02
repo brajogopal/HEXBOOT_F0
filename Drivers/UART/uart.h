@@ -22,7 +22,6 @@ typedef enum
 
 void debug_uart_init(uint32_t baudrate);
 void uart_interrupt_init(uint32_t baudrate);
-uint32_t get_pclk1_freq(void);
 void println(const char *str);
 char uart_receive_char(void);
 void uart_receive_string(char *buffer, uint32_t max_length);

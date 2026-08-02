@@ -16,6 +16,7 @@
 typedef struct
 {
     uint8_t  header;
+    uint8_t  reserved;
     uint16_t payload_length_A;
     uint16_t payload_length_B;
     uint16_t crc_A;
@@ -26,7 +27,7 @@ typedef struct
 typedef enum
 {
     PARSE_HEADER,
-	START_PAYLOAD_DMA,
+	DISCARD_PAYLOAD,
     RECEIVE_PAYLOAD,
     FW_COMPLETE,
     FW_ERROR
@@ -44,13 +45,13 @@ extern volatile uint8_t program_chunk_size;
 
 void firmware_receiver_init(void);
 
-void firmware_receiver_dma_callback(uint8_t value);
-
 void firmware_set_payload_info(uint16_t length, uint16_t crc);
 
 uint8_t get_rx_update(void);
 
 fw_rx_state_t firmware_rx_get_state(void);
+
+void firmware_rx_set_state(fw_rx_state_t set_state);
 
 void firmware_rx_process(void);
 

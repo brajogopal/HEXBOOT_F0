@@ -3,7 +3,7 @@
  *
  * Public interface for DMA driver.
  */
-#include <stdint.h>
+
 
 #ifndef DMA_H_
 #define DMA_H_
@@ -14,6 +14,13 @@
 #define RCC_DMA_EN		(1UL << 0U)
 #define USART_DMA_RE	(1UL << 6U)
 #define DMA_EN			(1UL << 0U)
+
+
+
+uint8_t dma_get_transfer_complete(void);
+void dma_clear_transfer_complete(void);
+uint8_t dma_get_transfer_error(void);
+void dma_clear_transfer_error(void);
 
 
 void dma_init(void);

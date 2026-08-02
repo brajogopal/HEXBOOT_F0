@@ -7,9 +7,11 @@
 #include "stm32f030x8.h"
 
 #include "dma.h"
-#include "firmware_receiver.h"
-#include "uart.h"
 
+
+/* Reception Status */
+static volatile uint8_t dma_transfer_complete = 0;
+static volatile uint8_t dma_transfer_error = 0;
 
 
 /******************************************************************************
@@ -54,6 +56,25 @@ void dma_receive(void *buffer, uint16_t size)
 }
 
 
+uint8_t dma_get_transfer_complete(void)
+{
+    return dma_transfer_complete;
+}
+
+void dma_clear_transfer_complete(void)
+{
+    dma_transfer_complete = 0;
+}
+
+uint8_t dma_get_transfer_error(void)
+{
+	return dma_transfer_error;
+}
+
+void dma_clear_transfer_error(void)
+{
+	dma_transfer_error = 0;
+}
 
 
 void DMA1_CH4_5_IRQHandler(void)
@@ -61,13 +82,12 @@ void DMA1_CH4_5_IRQHandler(void)
     if(DMA1->ISR & DMA_ISR_TCIF5)
     {
         DMA1->IFCR |= DMA_IFCR_CGIF5;
-        firmware_receiver_dma_callback(1);
+        dma_transfer_complete = 1;
     }
 
     if(DMA1->ISR & DMA_ISR_TEIF5)
     {
-        println("DMA ERROR");
-
+    	dma_transfer_error = 1;
         DMA1->IFCR |= DMA_IFCR_CGIF5;
     }
 }

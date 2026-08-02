@@ -37,10 +37,10 @@
 #include "bsp.h"
 #include "systick.h"
 
-
+#include <stdio.h>
 
 #define SYSCFG_EN				(1U << 0)
-#define BOOTLOADER_TIMEOUT_MS	5000U
+#define UPDATE_TIMEOUT_MS	5000U
 #define DEBUG_UART_BAUDRATE		19200U
 
 
@@ -65,13 +65,11 @@ static uint16_t expected_crc = 0;
 static uint16_t calculated_crc = 0;
 
 /* Flash Programming */
-static uint16_t chunk_index = 0;
+static uint16_t chunk_index;
 
 /* Boot Management */
-static uint32_t boot_start = 0;
+static uint32_t last_activity_tick = 0;
 static uint8_t boot_failed = 0;
-static uint8_t update_started = 0;
-
 
 
 /* Private Types */
@@ -83,14 +81,11 @@ typedef void (*app_entry_t)(void);
 static firmware_info_t firmware_get_info(slot_t slot);
 static void print_slot(slot_t slot);
 static void bootloader_state(void);
-static void bootloader_send_requested_slot(slot_t slot);
 static void flash_handle_status(flash_status_t status);
 static int is_valid_app(uint32_t addr);
 static void relocate_vector_table(uint32_t app_address);
 static void jmp_to_app(uint32_t app_address);
 static void jump(void);
-
-
 
 
 /*=============================================================
@@ -110,7 +105,7 @@ void bootloader_init(void)
 
     systick_init(1000);        // 1 ms tick
 
-    boot_start = systick_get_tick();
+    last_activity_tick = systick_get_tick();
 
 	println("bootloader init");
 }
@@ -120,22 +115,27 @@ void bootloader_init(void)
 void bootloader_run(void)
 {
 
-	if (get_rx_update())
+	if (dma_get_transfer_complete())
 	{
-		if (!update_started)
-		    {
-		    update_started = 1;
-		    boot_start = systick_get_tick();
-		    }
-		firmware_receiver_dma_callback(0);
+		last_activity_tick = systick_get_tick();
+		dma_clear_transfer_complete();
 		firmware_rx_process();
-		bootloader_state();
+		if(firmware_rx_get_state() != DISCARD_PAYLOAD)
+		{
+			bootloader_state();
+		}
 	}
 
-	if ((!update_started)  && (!boot_failed) &&
-			(systick_get_tick() - boot_start) >= BOOTLOADER_TIMEOUT_MS)
+	if(dma_get_transfer_error())
 	{
+	    dma_clear_transfer_error();
 
+	    println("DMA ERROR");
+
+	}
+
+	if ((!boot_failed) && (systick_get_tick() - last_activity_tick) >= UPDATE_TIMEOUT_MS)
+	{
 		slot_t boot_slot = slot_manager_select_boot_slot(&metadata);
 
 		if (boot_slot == SLOT_NONE)
@@ -143,10 +143,8 @@ void bootloader_run(void)
 		    println("No bootable application.");
 		    boot_failed = 1;
 		    return;
-		}	else	{
-		    jump();
 		}
-
+		jump();
 	}
 
 	if(firmware_rx_get_state() == FW_COMPLETE)
@@ -166,23 +164,30 @@ static void bootloader_state(void){
 	{
 	case BOOT_WAIT_HEADER:
 
+
 		target_slot = slot_manager_get_inactive_slot(&metadata);
 		firmware_info_t fw = firmware_get_info(target_slot);
 
 		payload_length = fw.payload_length;
 		expected_crc = fw.crc;
-		firmware_set_payload_info(fw.payload_length, fw.crc);
-
-		firmware_rx_process(); /* Arm DMA for payload reception */
-
-		bootloader_send_requested_slot(target_slot);
 
 		flash_status_t flash_status;
 		flash_status = flash_erase(slot_manager_get_slot_address(target_slot), payload_length);
 		flash_handle_status(flash_status);
 
+		chunk_index = 0;
 		boot_state = BOOT_RECEIVE_FIRMWARE;
 
+		if(target_slot == SLOT_A)
+		{
+		    firmware_set_payload_info(payload_length_A, expected_crc_A);
+		    firmware_rx_set_state(RECEIVE_PAYLOAD);
+		}
+		else
+		{
+		    firmware_set_payload_info(payload_length_B, expected_crc_B);
+		    firmware_rx_set_state(DISCARD_PAYLOAD);
+		}
 	        break;
 
 
@@ -244,18 +249,6 @@ static void bootloader_state(void){
 	}
 }
 
-
-
-static void bootloader_send_requested_slot(slot_t slot){
-    if (slot == SLOT_A)
-    {
-        println("Send Application : A");
-    }
-    else
-    {
-        println("Send Application : B");
-    }
-}
 
 
 

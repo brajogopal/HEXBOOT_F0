@@ -16,6 +16,7 @@
 #include "uart.h"
 #include "dma.h"
 
+#include <stdio.h>
 
 #define FW_HEADER 0xAA
 
@@ -41,8 +42,8 @@ volatile uint8_t program_chunk_size;
 
 
 /* DMA */
+static const uint16_t default_chunk_size = 128;
 static uint16_t current_chunk_size;
-static volatile uint8_t rx_data_ready;
 
 
 /* State */
@@ -65,17 +66,16 @@ void firmware_receiver_init(void)
 }
 
 
-void firmware_receiver_dma_callback(uint8_t value)
-{
-    rx_data_ready = value;
-}
-
-
 void firmware_rx_process(void)
 {
     switch (rx_state)
     {
         case PARSE_HEADER:
+           	/* Start DMA reception */
+        	bytes_received = 0;
+        	current_chunk_size = default_chunk_size;
+           	dma_receive(fw_pingpong.rx_buffer, current_chunk_size );
+
         	/* Validate header and extract firmware information */
         	if (fw_header.header == FW_HEADER)
         	{
@@ -86,7 +86,6 @@ void firmware_rx_process(void)
         		expected_crc_B = fw_header.crc_B;
 
         		header_received = 1;
-        		rx_state = START_PAYLOAD_DMA;
         	}
         	else
         	{
@@ -94,12 +93,34 @@ void firmware_rx_process(void)
         	}
             break;
 
-        case START_PAYLOAD_DMA:
-        	/* Start DMA reception */
-        	current_chunk_size = firmware_get_next_chunk_size();
-        	dma_receive(fw_pingpong.rx_buffer, current_chunk_size);
-        	rx_state =  RECEIVE_PAYLOAD;
-        	break;
+
+
+        case DISCARD_PAYLOAD:
+
+        	bytes_received += current_chunk_size;
+            current_chunk_size = firmware_get_next_chunk_size();
+
+            if(current_chunk_size > 0)
+            {
+                dma_receive(fw_pingpong.rx_buffer,current_chunk_size);
+            }
+            else
+            {
+                bytes_received = 0;
+                fw_pingpong.prog_ready = 0;
+
+                firmware_set_payload_info(payload_length_B, expected_crc_B);
+
+                current_chunk_size = firmware_get_next_chunk_size();
+
+                dma_receive(fw_pingpong.rx_buffer, current_chunk_size);
+
+                rx_state = RECEIVE_PAYLOAD;
+            }
+
+            break;
+
+
 
         case RECEIVE_PAYLOAD:
         	/* Process received DMA chunk */
@@ -139,9 +160,9 @@ fw_rx_state_t firmware_rx_get_state(void)
 }
 
 
-uint8_t get_rx_update(void)
+void firmware_rx_set_state(fw_rx_state_t set_state)
 {
-	return rx_data_ready;
+    rx_state = set_state;
 }
 
 
